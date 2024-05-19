@@ -40,6 +40,6 @@ jobs:
           file: src/Dockerfile
           push: true
           tags: |
-            leonardoapiovezan/conversao-temperatura:v1
+            leonardoapiovezan/conversao-temperatura:${{github.run_number}}
             leonardoapiovezan/conversao-temperatura:latest
           
