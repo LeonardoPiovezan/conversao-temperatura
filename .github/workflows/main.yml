@@ -26,4 +26,15 @@ jobs:
 
       - name: Execute Tests
         run: mocha src/test/convert.js
-      
+        
+        
+      - name: Docker Image
+        uses: docker/build-push-action@v5.3.0
+        with: 
+          context: src 
+          file: src/Dockerfile
+          push: true
+          tags: |
+            leonardoapiovezan/conversao-temperatura:v1
+            leonardoapiovezan/conversao-temperatura:latest
+          
